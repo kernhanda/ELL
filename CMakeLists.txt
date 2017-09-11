@@ -2,13 +2,13 @@
 # cmake file for Embedded Learning Library subprojects
 #
 
-cmake_minimum_required(VERSION 3.3 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 
 project(ELL)
 
 # Define custom configuration types for Visual Studio
 if(CMAKE_CONFIGURATION_TYPES)
-  # Copy important configuration info from Release config to new Documentation config  
+  # Copy important configuration info from Release config to new Documentation config
   list(APPEND CMAKE_CONFIGURATION_TYPES Documentation)
   set(CMAKE_CXX_FLAGS_DOCUMENTATION ${CMAKE_CXX_FLAGS_RELEASE})
   set(CMAKE_C_FLAGS_DOCUMENTATION ${CMAKE_C_FLAGS_RELEASE})
