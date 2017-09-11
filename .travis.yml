@@ -12,14 +12,14 @@ cache:
 
 matrix:
   include:
-#    - env: BUILD_TYPE=Debug
-#      os: osx
-#      osx_image: xcode8
-#      compiler: clang
-#    - env: BUILD_TYPE=Release
-#      os: osx
-#      osx_image: xcode8
-#      compiler: clang
+    - env: BUILD_TYPE=Debug
+      os: osx
+      osx_image: xcode8
+      compiler: clang
+    - env: BUILD_TYPE=Release
+      os: osx
+      osx_image: xcode8
+      compiler: clang
     - env: CLANG_VERSION=3.9 BUILD_TYPE=Debug
       os: linux
       addons: &clang39
@@ -93,7 +93,11 @@ install:
        fi
       export PATH="${DEPS_DIR}/cmake/bin:${PATH}"
     else
-      if ! brew ls --version cmake &>/dev/null; then brew install cmake; fi
+      brew update
+      brew install cmake
+      brew install llvm@3.9 --with-clang
+      brew install homebrew/science/openblas
+      brew install python3
     fi
   ############################################################################
   # [linux]: Install the right version of libc++
