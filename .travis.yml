@@ -38,7 +38,7 @@ matrix:
         apt:
           packages:
             - clang-3.7
-            - llvm-dev-3.7
+            - llvm-3.7-dev
             - g++-5
           sources: &sources
             - ubuntu-toolchain-r-test
@@ -52,7 +52,7 @@ matrix:
         apt:
           packages:
             - clang-3.8
-            - llvm-dev-3.8
+            - llvm-3.8-dev
             - g++-5
           sources: &sources
             - ubuntu-toolchain-r-test
@@ -66,7 +66,7 @@ matrix:
         apt:
           packages:
             - clang-3.9
-            - llvm-dev-3.9
+            - llvm-3.9-dev
             - g++-5
           sources: &sources
             - ubuntu-toolchain-r-test
@@ -80,7 +80,7 @@ matrix:
         apt:
           packages:
           - g++-5
-          - llvm-dev-3.9
+          - llvm-3.9-dev
           sources: *sources
     - env: GCC_VERSION=5 BUILD_TYPE=Release
       os: linux
@@ -91,7 +91,7 @@ matrix:
         apt:
           packages:
           - g++-6
-          - llvm-dev-3.9
+          - llvm-3.9-dev
           sources: *sources
     - env: GCC_VERSION=6 BUILD_TYPE=Release
       os: linux
