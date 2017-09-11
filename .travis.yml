@@ -40,6 +40,12 @@ matrix:
             - clang-3.7
             - llvm-3.7-dev
             - g++-5
+            - libedit-dev
+            - zlibc
+            - zlib1g 
+            - zlib1g-dev
+            - python3-dev
+            - libopenblas-dev
           sources: &sources
             - ubuntu-toolchain-r-test
             - llvm-toolchain-precise-3.7
@@ -54,6 +60,12 @@ matrix:
             - clang-3.8
             - llvm-3.8-dev
             - g++-5
+            - libedit-dev
+            - zlibc
+            - zlib1g 
+            - zlib1g-dev
+            - python3-dev
+            - libopenblas-dev
           sources: &sources
             - ubuntu-toolchain-r-test
             - llvm-toolchain-precise-3.8
@@ -68,6 +80,12 @@ matrix:
             - clang-3.9
             - llvm-3.9-dev
             - g++-5
+            - libedit-dev
+            - zlibc
+            - zlib1g 
+            - zlib1g-dev
+            - python3-dev
+            - libopenblas-dev
           sources: &sources
             - ubuntu-toolchain-r-test
             - llvm-toolchain-precise-3.9
@@ -81,6 +99,12 @@ matrix:
           packages:
           - g++-5
           - llvm-3.9-dev
+          - libedit-dev
+          - zlibc
+          - zlib1g 
+          - zlib1g-dev
+          - python3-dev
+          - libopenblas-dev
           sources: *sources
     - env: GCC_VERSION=5 BUILD_TYPE=Release
       os: linux
@@ -92,6 +116,12 @@ matrix:
           packages:
           - g++-6
           - llvm-3.9-dev
+          - libedit-dev
+          - zlibc
+          - zlib1g 
+          - zlib1g-dev
+          - python3-dev
+          - libopenblas-dev
           sources: *sources
     - env: GCC_VERSION=6 BUILD_TYPE=Release
       os: linux
